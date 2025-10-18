@@ -1,5 +1,5 @@
 import SecretList from './components/SecretList';
-import SecretForm from './components/SecretForm';
+import CreateSecret from './components/CreateSecret';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import logo from './logo.svg';
@@ -18,11 +18,15 @@ function App() {
 <Tabs>
     <TabList>
       <Tab>Add Secret</Tab>
-      <Tab>Check Secret</Tab>
+      <Tab>See Secrets</Tab>
+      <Tab>Get A Secret</Tab>
     </TabList>
 
     <TabPanel>
-        <SecretForm />
+        <CreateSecret/>
+    </TabPanel>
+    <TabPanel>
+        <SecretList />
     </TabPanel>
     <TabPanel>
         <SecretList />

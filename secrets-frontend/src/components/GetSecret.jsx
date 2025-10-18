@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-function SecretForm() {
+function CreateSecret() {
   const [name, setName] = useState('');
   const [value, setValue] = useState('');
   const [response, setResponse] = useState('');
@@ -41,5 +41,5 @@ function SecretForm() {
   );
 }
 
-export default SecretForm;
+export default CreateSecret;
 
