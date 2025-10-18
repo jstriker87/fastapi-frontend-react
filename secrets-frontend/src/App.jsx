@@ -1,5 +1,8 @@
 import SecretList from './components/SecretList';
 import CreateSecret from './components/CreateSecret';
+import GetSecret from './components/GetSecret';
+import CheckToken from './components/CheckToken';
+
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import logo from './logo.svg';
@@ -20,6 +23,7 @@ function App() {
       <Tab>Add Secret</Tab>
       <Tab>See Secrets</Tab>
       <Tab>Get A Secret</Tab>
+      <Tab>Check Token</Tab>
     </TabList>
 
     <TabPanel>
@@ -29,7 +33,10 @@ function App() {
         <SecretList />
     </TabPanel>
     <TabPanel>
-        <SecretList />
+        <GetSecret />
+    </TabPanel>
+    <TabPanel>
+        <CheckToken />
     </TabPanel>
   </Tabs>
       </div>

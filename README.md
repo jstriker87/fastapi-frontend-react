@@ -1,9 +1,12 @@
 # api-secrets-frontend
 
-1. Impletement the frontend based on the backend at https://github.com/dob3001/fastapi-secret-test
-2. Have it build a container that can run the frontend and expose the interface out on port 3000
-3. Show or write any testing that proofs out the functionality.
-4. Your free to come up with an UX design that makes sense for this type of admin portal.
+## Prerequisites
+- In order to test the tokens, an enviroment variables file (.env) must be created in the secrets-frontend folder
+- In env should contain a line with a SHARED_KEY. An example is: SHARED_KEY=ASDF12345QWERTY1234
+
+## Running instructions
+Navigate to secrets-frontend/
+Run:  docker compose up --build --force-recreate
 
 
 
