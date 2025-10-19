@@ -14,7 +14,6 @@ function CreateSecret() {
       // Optionally clear the form after successful submission
       setName('');
       setValue('');
-      console.log(resp.data)
       setResponse(resp.data.message)
     } catch (error) {
       setResponse(error.message)

@@ -15,11 +15,10 @@ function GetASecret() {
       });
       setName('');
       setEncoding("sha256")
-      console.log(resp.data)
       setResponse(resp.data.hash)
     } catch (error) {
       setResponse(error.message)
-      console.error('Error creating secret:', error);
+      console.error('Error getting secret:', error);
     }
   };
 

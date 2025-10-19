@@ -13,7 +13,6 @@ function CheckToken() {
       setToken('');
       setResponse("True")
     } catch (error) {
-      console.log("code 2",error)
       if (error.status == "401") 
       {
         setResponse("False")

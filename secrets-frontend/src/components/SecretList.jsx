@@ -10,9 +10,9 @@ function SecretList() {
     const fetchSecrets = async () => {
         try {
             const response = await axios.get(`http://localhost:8000/secrets?encoding_method=${encoding}`)
-            //const response = await axios.get('http://localhost:8000/secrets/'); // Replace with your API URL
             setSecrets(response.data);
         } catch (error) {
+            console.error('Error getting secret:', error);
             setError(error.message || 'Failed to fetch secrets');
         } finally {
             setLoading(false);
@@ -46,7 +46,9 @@ function SecretList() {
         </select>
     <ul>
       {secrets.map((secret) => (
-        <li key={secret.name}>
+        <li key={secret.name}
+        style={{ listStyleType: "none", padding: 0, margin: 0 }}
+        >
           {secret.name}:{secret.value}
         </li>
       ))}
